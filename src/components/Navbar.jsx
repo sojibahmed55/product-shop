@@ -51,7 +51,7 @@ export default function Navbar() {
               href="/products"
               className="relative px-2 py-1 transition hover:scale-110 hover:text-cyan-400"
             >
-              Products
+             All Products
             </Link>
           </li>
           <li>
