@@ -6,47 +6,59 @@ export default function Navbar() {
   const { data: session } = useSession()
 
   return (
-    <nav className="sticky top-0 z-50 bg-gradient-to-r from-gray-900 via-indigo-900 to-purple-900 text-white shadow-lg backdrop-blur-lg">
-      <div className="max-w-[1700px] mx-auto flex justify-between items-center px-6 py-4">
+    <nav className="sticky top-0 z-50 bg-white/10 backdrop-blur-lg border-b border-white/20 shadow-lg">
+      <div className="max-w-[1700px] mx-auto flex justify-between items-center px-8 py-4">
         {/* Logo */}
-       <Link href="/">
-        <div className="flex items-center gap-3">
-          <svg
-            width="32"
-            height="32"
-            viewBox="0 0 24 24"
-            fill="none"
-            className="text-purple-400"
-          >
-            <circle cx="12" cy="12" r="10" fill="currentColor" />
-            <text
-              x="12"
-              y="16"
-              textAnchor="middle"
-              fontSize="10"
-              fill="#fff"
+        <Link href="/">
+          <div className="flex items-center gap-3 cursor-pointer">
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 24 24"
+              fill="none"
+              className="text-cyan-400 drop-shadow-[0_0_8px_#06b6d4]"
             >
-              MS
-            </text>
-          </svg>
-          <h1 className="text-2xl font-extrabold tracking-tight">MyShop</h1>
-        </div>
-       </Link>
+              <circle cx="12" cy="12" r="10" fill="currentColor" />
+              <text
+                x="12"
+                y="16"
+                textAnchor="middle"
+                fontSize="10"
+                fill="#fff"
+                className="font-bold"
+              >
+                MPS
+              </text>
+            </svg>
+            <h1 className="text-3xl font-extrabold tracking-tight bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(255,255,255,0.3)]">
+              My Product Shop
+            </h1>
+          </div>
+        </Link>
 
         {/* Menu */}
-        <ul className="flex gap-8 text-lg font-medium items-center">
+        <ul className="flex gap-10 text-lg font-semibold items-center">
           <li>
-            <Link href="/" className="hover:text-purple-400 transition">
+            <Link
+              href="/"
+              className="relative px-2 py-1 transition hover:scale-110 hover:text-cyan-400"
+            >
               Home
             </Link>
           </li>
           <li>
-            <Link href="/products" className="hover:text-purple-400 transition">
+            <Link
+              href="/products"
+              className="relative px-2 py-1 transition hover:scale-110 hover:text-cyan-400"
+            >
               Products
             </Link>
           </li>
           <li>
-            <Link href="/add-product" className="hover:text-purple-400 transition">
+            <Link
+              href="/add-product"
+              className="relative px-2 py-1 transition hover:scale-110 hover:text-cyan-400"
+            >
               Add Products
             </Link>
           </li>
@@ -54,7 +66,10 @@ export default function Navbar() {
           {/* Login link if not logged in */}
           {!session && (
             <li>
-              <Link href="/login" className="hover:text-purple-400 transition">
+              <Link
+                href="/login"
+                className="px-6 py-2 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 shadow-lg hover:from-purple-600 hover:to-pink-500 transition text-white font-semibold"
+              >
                 Login
               </Link>
             </li>
@@ -62,20 +77,20 @@ export default function Navbar() {
 
           {/* User info & Sign out if logged in */}
           {session && (
-            <li className="flex items-center gap-3">
+            <li className="flex items-center gap-4">
               {session.user?.image && (
                 <img
                   src={session.user.image}
                   alt="avatar"
-                  className="w-8 h-8 rounded-full border border-white"
+                  className="w-10 h-10 rounded-full border-2 border-cyan-400 shadow-md"
                 />
               )}
-              <span className="font-semibold">
+              <span className="font-semibold text-sm text-gray-100">
                 {session.user?.name || session.user?.email}
               </span>
               <button
                 onClick={() => signOut()}
-                className="ml-2 px-4 py-1 bg-purple-600 rounded-xl text-white font-semibold hover:bg-purple-700 transition"
+                className="ml-3 px-6 py-2 rounded-full bg-gradient-to-r from-purple-600 to-cyan-500 text-white font-semibold shadow-lg hover:from-cyan-500 hover:to-purple-600 transition"
               >
                 Sign out
               </button>
