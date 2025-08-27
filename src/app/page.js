@@ -6,48 +6,26 @@ import Products from '@/components/Products';
 
 function FeaturesSection() {
   return (
-    <section className="py-20  backdrop-blur-lg">
-      <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
-        <div className="bg-gradient-to-br from-amber-700 to-indigo-700 rounded-2xl p-8 shadow-lg text-white">
-          <h3 className="text-xl font-bold mb-3">Easy Product Management</h3>
-          <p>Organize, track, and manage your products with a simple and intuitive dashboard.</p>
-        </div>
-        <div className="bg-gradient-to-br from-amber-700 to-indigo-700 rounded-2xl p-8 shadow-lg text-white">
-          <h3 className="text-xl font-bold mb-3">Secure Authentication</h3>
-          <p>Sign in with Google or email/password. Your data is protected with modern security standards.</p>
-        </div>
-        <div className="bg-gradient-to-br from-amber-700 to-indigo-700 rounded-2xl p-8 shadow-lg text-white">
-          <h3 className="text-xl font-bold mb-3">Expert Support</h3>
-          <p>Get help from our team of experts whenever you need it. Fast, friendly, and reliable.</p>
-        </div>
-      </div>
-    </section>
+    <section className=" relative py-20 bg-gradient-to-br from-gray-950 via-purple-950 to-black overflow-hidden">
+  <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+    <div className="bg-gradient-to-br from-teal-600 to-blue-700 rounded-2xl p-8 shadow-2xl text-white hover:scale-105 transform transition duration-300">
+      <h3 className="text-xl font-bold mb-3">Smart Inventory Control</h3>
+      <p>Monitor stock levels, automate alerts, and optimize your inventory effortlessly with our advanced dashboard.</p>
+    </div>
+    <div className="bg-gradient-to-br from-purple-600 to-indigo-600 rounded-2xl p-8 shadow-2xl text-white hover:scale-105 transform transition duration-300">
+      <h3 className="text-xl font-bold mb-3">AI-Powered Insights</h3>
+      <p>Get actionable insights on sales, trends, and customer behavior with real-time AI-powered analytics.</p>
+    </div>
+    <div className="bg-gradient-to-br from-pink-600 to-red-600 rounded-2xl p-8 shadow-2xl text-white hover:scale-105 transform transition duration-300">
+      <h3 className="text-xl font-bold mb-3">24/7 Expert Assistance</h3>
+      <p>Our team of product specialists is always ready to help you solve issues, answer questions, and boost your efficiency.</p>
+    </div>
+  </div>
+</section>
   );
 }
 
-function TestimonialsSection() {
-  return (
-    <section className="py-20 bg-gradient-to-r from-gray-900 via-indigo-900 to-purple-900 text-white">
-      <div className="max-w-5xl mx-auto px-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-10">What Our Users Say</h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-white/10 rounded-2xl p-6 shadow-lg">
-            <p className="italic mb-4">“This platform made managing my products so much easier. Highly recommended!”</p>
-            <span className="font-semibold text-purple-300">— Sarah, Entrepreneur</span>
-          </div>
-          <div className="bg-white/10 rounded-2xl p-6 shadow-lg">
-            <p className="italic mb-4">“The authentication is seamless and secure. I feel safe using it every day.”</p>
-            <span className="font-semibold text-purple-300">— Alex, Developer</span>
-          </div>
-          <div className="bg-white/10 rounded-2xl p-6 shadow-lg">
-            <p className="italic mb-4">“Support is fantastic! Quick responses and very helpful.”</p>
-            <span className="font-semibold text-purple-300">— Priya, Manager</span>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
+
 
 function Page() {
   return (
@@ -55,7 +33,7 @@ function Page() {
       <Hero />
       <Products />
       <FeaturesSection />
-      <TestimonialsSection />
+      
     </div>
   );
 }
