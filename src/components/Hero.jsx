@@ -12,26 +12,27 @@ function Hero() {
 
       {/* Content */}
       <div className="relative mx-auto max-w-[1600px] px-6 py-[150px] flex flex-col items-center text-center z-10">
-        <h1 className="text-5xl md:text-7xl font-extrabold leading-tight tracking-tight drop-shadow-xl">
-          Discover{" "}
-          <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
-            Your Passion
-          </span>{" "}
-          <br />
-          <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-            Learn & Connect
-          </span>{" "}
-          with Experts
-        </h1>
+  <h1 className="text-5xl md:text-7xl font-extrabold leading-tight tracking-tight drop-shadow-xl">
+    Manage{" "}
+    <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+      Your Products
+    </span>{" "}
+    <br />
+    <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+      Track & Optimize
+    </span>{" "}
+    with Ease
+  </h1>
 
-        <p className="mt-8 text-lg md:text-xl max-w-2xl text-gray-300 leading-relaxed">
-          Join thousands of learners worldwide. Explore new skills, book expert
-          tutors, and achieve your goals in a{" "}
-          <span className="text-purple-300 font-semibold">
-            modern & engaging
-          </span>{" "}
-          way.
-        </p>
+  <p className="mt-8 text-lg md:text-xl max-w-2xl text-gray-300 leading-relaxed">
+    Streamline your inventory and sales effortlessly. Add, update, and monitor products in a{" "}
+    <span className="text-purple-300 font-semibold">
+      modern & intuitive
+    </span>{" "}
+    dashboard designed for growth.
+  </p>
+
+
 
         {/* Buttons */}
         <div className="mt-12 flex gap-6">
