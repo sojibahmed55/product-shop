@@ -6,7 +6,7 @@ import Products from '@/components/Products';
 
 function FeaturesSection() {
   return (
-    <section className="py-20 bg-gradient-to-br from-green-700 to-blue-700 backdrop-blur-lg">
+    <section className="py-20  backdrop-blur-lg">
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
         <div className="bg-gradient-to-br from-amber-700 to-indigo-700 rounded-2xl p-8 shadow-lg text-white">
           <h3 className="text-xl font-bold mb-3">Easy Product Management</h3>

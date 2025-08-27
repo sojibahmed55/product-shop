@@ -9,6 +9,7 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 bg-gradient-to-r from-gray-900 via-indigo-900 to-purple-900 text-white shadow-lg backdrop-blur-lg">
       <div className="max-w-[1700px] mx-auto flex justify-between items-center px-6 py-4">
         {/* Logo */}
+       <Link href="/">
         <div className="flex items-center gap-3">
           <svg
             width="32"
@@ -30,6 +31,7 @@ export default function Navbar() {
           </svg>
           <h1 className="text-2xl font-extrabold tracking-tight">MyShop</h1>
         </div>
+       </Link>
 
         {/* Menu */}
         <ul className="flex gap-8 text-lg font-medium items-center">

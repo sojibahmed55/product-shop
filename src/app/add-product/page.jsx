@@ -5,7 +5,7 @@
 import React, { useState } from "react";
 
 export default function AddProductPage() {
-  const [form, setForm] = useState({ name: "", price: "" });
+  const [form, setForm] = useState({ name: "", img: "", description: "", price: "" });
   const [success, setSuccess] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -25,12 +25,14 @@ export default function AddProductPage() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           name: form.name,
+          img: form.img,
+          description: form.description,
           price: Number(form.price),
         }),
       });
       if (res.ok) {
         setSuccess("Product added successfully!");
-        setForm({ name: "", price: "" });
+        setForm({ name: "", img: "", description: "", price: "" });
       } else {
         const data = await res.json();
         setSuccess(data.error || "Failed to add product.");
@@ -62,14 +64,38 @@ export default function AddProductPage() {
           />
         </div>
         <div>
-          <label className="block text-gray-200 mb-1">Product Price</label>
+          <label className="block text-gray-200 mb-1">Product Image URL</label>
+          <input
+            type="text"
+            name="img"
+            value={form.img}
+            onChange={handleChange}
+            className="w-full px-4 py-2 text-white placeholder-gray-400 bg-white/5 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            placeholder="Enter image URL"
+            required
+          />
+        </div>
+        <div>
+          <label className="block text-gray-200 mb-1">Product Description</label>
+          <textarea
+            name="description"
+            value={form.description}
+            onChange={handleChange}
+            className="w-full px-4 py-2 text-white placeholder-gray-400 bg-white/5 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            placeholder="Enter product description"
+            rows={3}
+            required
+          />
+        </div>
+        <div>
+          <label className="block text-gray-200 mb-1">Product Price $</label>
           <input
             type="number"
             name="price"
             value={form.price}
             onChange={handleChange}
             className="w-full px-4 py-2 text-white placeholder-gray-400 bg-white/5 border border-white/20 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500"
-            placeholder="Enter product price"
+            placeholder="Enter product price "
             required
           />
         </div>
